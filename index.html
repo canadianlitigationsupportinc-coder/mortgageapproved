@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Approved Inc. | Trusted Mortgage Brokerage in Mississauga & GTA</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0F172A',
+                            900: '#0A192F',
+                            950: '#030712',
+                        },
+                        gold: {
+                            400: '#FBBF24',
+                            500: '#D97706',
+                            600: '#B45309',
+                            700: '#92400E',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FBBF24 0%, #D97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
+        }
+        .gold-gradient-hover:hover {
+            background: linear-gradient(135deg, #B45309 0%, #92400E 100%);
+        }
+        .hero-pattern {
+            background-color: #0A192F;
+            background-image: radial-gradient(rgba(217, 119, 6, 0.15) 1px, transparent 0);
+            background-size: 28px 28px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-gold-500 selection:text-white">
+
+    <!-- TOP UTILITY BAR -->
+    <div class="bg-navy-950 text-slate-300 text-xs sm:text-sm py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-gold-500"></i> Mississauga, Ontario & GTA
+                </span>
+                <span class="hidden md:flex items-center gap-2">
+                    <i class="fa-solid fa-building-columns text-gold-500"></i> Licensed Ontario Mortgage Brokerage
+                </span>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+                <a href="tel:4166496441" class="hover:text-gold-400 transition-colors flex items-center gap-1.5 font-semibold text-gold-400">
+                    <i class="fa-solid fa-phone"></i> 416-649-6441
+                </a>
+                <span class="text-slate-600 hidden sm:inline">|</span>
+                <a href="tel:4165727434" class="hover:text-gold-400 transition-colors flex items-center gap-1.5 font-semibold text-gold-400">
+                    <i class="fa-solid fa-phone"></i> 416-572-7434
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-slate-800 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 rounded-xl gold-gradient-bg flex items-center justify-center shadow-lg shadow-gold-500/20 group-hover:scale-105 transition-transform duration-300">
+                        <i class="fa-solid fa-circle-check text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-xl font-extrabold tracking-tight text-white flex items-center gap-1">
+                            MORTGAGE <span class="text-gold-500 font-light">APPROVED</span>
+                        </div>
+                        <div class="text-[10px] tracking-widest text-slate-400 uppercase">INC. | Mortgage Brokerage</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-200">
+                    <a href="#home" class="hover:text-gold-400 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-gold-400 transition-colors">About Us</a>
+                    <a href="#services" class="hover:text-gold-400 transition-colors">Services</a>
+                    <a href="#how-it-works" class="hover:text-gold-400 transition-colors">How It Works</a>
+                    <a href="#contact" class="hover:text-gold-400 transition-colors">Contact Us</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden lg:flex items-center">
+                    <a href="#contact" class="gold-gradient-bg text-white font-semibold text-sm px-6 py-2.5 rounded-xl shadow-lg shadow-gold-600/30 gold-gradient-hover transition-all duration-300 transform hover:-translate-y-0.5">
+                        Book Free Consultation
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white p-2 rounded-lg focus:outline-none" aria-label="Toggle Navigation Menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-gold-400">Home</a>
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-gold-400">About Us</a>
+            <a href="#services" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-gold-400">Services</a>
+            <a href="#how-it-works" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-gold-400">How It Works</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-gold-400">Contact Us</a>
+            
+            <div class="pt-2 border-t border-slate-800 space-y-2">
+                <a href="tel:4166496441" class="block text-center bg-slate-800 text-gold-400 font-semibold py-2.5 rounded-xl text-sm">
+                    <i class="fa-solid fa-phone mr-1.5"></i> Call: 416-649-6441
+                </a>
+                <a href="tel:4165727434" class="block text-center bg-slate-800 text-gold-400 font-semibold py-2.5 rounded-xl text-sm">
+                    <i class="fa-solid fa-phone mr-1.5"></i> Call: 416-572-7434
+                </a>
+                <a href="#contact" class="mobile-link block w-full text-center gold-gradient-bg text-white font-semibold py-3 rounded-xl">
+                    Book Free Consultation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO SECTION -->
+    <section id="home" class="hero-pattern relative text-white py-20 lg:py-28 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/60 to-navy-900 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/80 border border-gold-500/30 text-gold-400 text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-md">
+                        <i class="fa-solid fa-shield-halved text-gold-500"></i> Leading Mortgage Brokerage in Mississauga & GTA
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Empowering Your Real Estate Journey with <span class="gold-gradient-text">Trusted Mortgage Solutions</span>
+                    </h1>
+                    
+                    <p class="text-slate-300 text-base sm:text-lg lg:text-xl max-w-2xl font-normal leading-relaxed mx-auto lg:mx-0">
+                        At Mortgage Approved Inc., we simplify home financing across Mississauga, Brampton, Oakville, and Toronto West with competitive interest rates, customized options, and expert underwriting.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#contact" class="w-full sm:w-auto gold-gradient-bg text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-gold-600/25 gold-gradient-hover text-center transition-all duration-300 transform hover:-translate-y-1">
+                            Get Pre-Approved Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#services" class="w-full sm:w-auto bg-slate-800/90 hover:bg-slate-800 text-slate-100 border border-slate-700 font-semibold px-8 py-4 rounded-xl text-center backdrop-blur-md transition-all duration-300 hover:border-gold-500/50">
+                            Explore Services
+                        </a>
+                    </div>
+
+                    <!-- Direct Contact Highlights -->
+                    <div class="pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
+                        <a href="tel:4166496441" class="p-3.5 rounded-xl bg-navy-800/50 border border-slate-800 block hover:border-gold-500/50 transition-colors">
+                            <div class="text-gold-400 font-bold text-base sm:text-lg">416-649-6441</div>
+                            <div class="text-xs text-slate-400">Direct Office Line 1</div>
+                        </a>
+                        <a href="tel:4165727434" class="p-3.5 rounded-xl bg-navy-800/50 border border-slate-800 block hover:border-gold-500/50 transition-colors">
+                            <div class="text-gold-400 font-bold text-base sm:text-lg">416-572-7434</div>
+                            <div class="text-xs text-slate-400">Direct Office Line 2</div>
+                        </a>
+                        <div class="p-3.5 rounded-xl bg-navy-800/50 border border-slate-800">
+                            <div class="text-gold-400 font-bold text-base sm:text-lg">50+ Lenders</div>
+                            <div class="text-xs text-slate-400">Banks & Private Capital</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-navy-800/50 border border-slate-800">
+                            <div class="text-gold-400 font-bold text-base sm:text-lg">24-48 Hours</div>
+                            <div class="text-xs text-slate-400">Fast Approvals</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Consultation Request Box -->
+                <div class="lg:col-span-5">
+                    <div class="bg-slate-900/90 border border-gold-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl relative">
+                        <div class="absolute -top-3 -right-3 gold-gradient-bg text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            Direct Inquiry
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Request an Approval Assessment</h3>
+                        <p class="text-xs text-slate-400 mb-6">Connect directly with our senior mortgage underwriting advisors for competitive rate matching.</p>
+                        
+                        <form action="https://formspree.io/f/xvkkayed" method="POST" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Mortgage Service Needed</label>
+                                <select name="service" required class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-gold-500">
+                                    <option value="New Home Purchases">New Home Purchases</option>
+                                    <option value="Mortgage Renewals & Refinancing">Mortgage Renewals & Refinancing</option>
+                                    <option value="Self-Employed Mortgages">Self-Employed Mortgages</option>
+                                    <option value="Investment Property Financing">Investment Property Financing</option>
+                                    <option value="First-Time Home Buyers">First-Time Home Buyers</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Full Name *</label>
+                                <input type="text" name="name" placeholder="John Doe" required class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-gold-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Phone Number *</label>
+                                <input type="tel" name="phone" placeholder="(416) 000-0000" required class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-gold-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Email Address *</label>
+                                <input type="email" name="email" placeholder="john@example.com" required class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-gold-500">
+                            </div>
+                            <button type="submit" class="w-full gold-gradient-bg text-white font-bold py-3.5 rounded-xl shadow-lg shadow-gold-600/30 gold-gradient-hover transition-all duration-300 text-sm">
+                                Submit Request
+                            </button>
+                            <p class="text-[11px] text-center text-slate-400">100% Confidential. No obligation or credit impact.</p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT US -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Visual Box -->
+                <div class="lg:col-span-5">
+                    <div class="relative">
+                        <div class="aspect-w-4 aspect-h-5 bg-navy-900 rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100 min-h-[420px] flex flex-col justify-between hero-pattern p-8 text-white">
+                            <div class="space-y-4">
+                                <div class="w-14 h-14 rounded-2xl gold-gradient-bg flex items-center justify-center text-white text-2xl">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold">Mortgage Approved Inc.</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    A premier mortgage brokerage firm based in Mississauga, Ontario, serving home buyers, investors, and business owners throughout the Greater Toronto Area.
+                                </p>
+                            </div>
+
+                            <div class="pt-6 border-t border-slate-800 space-y-3">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 rounded-full bg-gold-500/20 border border-gold-500 flex items-center justify-center text-gold-400 font-bold text-sm">
+                                        MA
+                                    </div>
+                                    <div>
+                                        <div class="text-sm font-bold text-white">Licensed Brokerage</div>
+                                        <div class="text-xs text-gold-400">Licensed in Ontario</div>
+                                    </div>
+                                </div>
+                                <div class="text-xs text-slate-300 pt-1 space-y-1">
+                                    <div><i class="fa-solid fa-phone text-gold-500 mr-1.5"></i> <strong>416-649-6441</strong></div>
+                                    <div><i class="fa-solid fa-phone text-gold-500 mr-1.5"></i> <strong>416-572-7434</strong></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 hidden sm:block max-w-[220px]">
+                            <div class="text-3xl font-extrabold text-navy-900">50+</div>
+                            <div class="text-xs text-slate-600 font-medium mt-1">Lending Partners Across Canada</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Corporate Profile Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-gold-600 font-bold text-xs uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-gold-500"></span> Corporate Excellence
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight">
+                        Why Homeowners & Investors Trust Mortgage Approved Inc.
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        Securing a mortgage shouldn't be stressful or complicated. At Mortgage Approved Inc., our licensed specialists act as your personal advocate, negotiating directly with Canada’s top banks, credit unions, and private lenders to deliver options that fit your life.
+                    </p>
+
+                    <!-- Feature Badges -->
+                    <div class="grid sm:grid-cols-2 gap-6 pt-2">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i class="fa-solid fa-handshake text-gold-600 text-lg"></i>
+                                <h3 class="font-bold text-navy-900">Comprehensive Bank Network</h3>
+                            </div>
+                            <p class="text-xs text-slate-600">Access major Canadian financial institutions, mono-line lenders, and private capital under one roof.</p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i class="fa-solid fa-bolt text-gold-600 text-lg"></i>
+                                <h3 class="font-bold text-navy-900">Rapid Approval Process</h3>
+                            </div>
+                            <p class="text-xs text-slate-600">Fast document verification and rapid underwriting turnarounds to secure your real estate purchases.</p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i class="fa-solid fa-glasses text-gold-600 text-lg"></i>
+                                <h3 class="font-bold text-navy-900">Transparent Guidance</h3>
+                            </div>
+                            <p class="text-xs text-slate-600">Zero hidden fine print. Clear explanations of rate types, pre-payment privileges, and penalty structures.</p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i class="fa-solid fa-user-shield text-gold-600 text-lg"></i>
+                                <h3 class="font-bold text-navy-900">Experienced Underwriting</h3>
+                            </div>
+                            <p class="text-xs text-slate-600">Senior leadership oversight ensuring optimized loan structuring for every unique client profile.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: SERVICES SECTION -->
+    <section id="services" class="py-20 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 text-gold-600 font-bold text-xs uppercase tracking-wider mb-2">
+                    <span class="w-2 h-2 rounded-full bg-gold-500"></span> Comprehensive Solutions
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+                    Tailored Mortgage & Financing Services
+                </h2>
+                <p class="text-slate-600 mt-3 text-base">
+                    From first home purchases to complex commercial investments, Mortgage Approved Inc. delivers customized mortgage structures designed for long-term financial success.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-navy-900 text-gold-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-house-chimney font-bold"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">New Home Purchases</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Fast 24-hour pre-approvals and rate lock-ins so you can purchase homes across Mississauga and the GTA with total confidence.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('New Home Purchases', 'Our residential purchasing program secures pre-approvals within 24 to 48 hours. We shop over 50 top Canadian banks, credit unions, and mono-line lenders to ensure you receive the most competitive interest rates and terms available in the market.')" class="text-gold-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                        View Service Details <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-navy-900 text-gold-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Mortgage Renewals & Refinancing</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Beat standard bank renewal offers and unlock home equity to consolidate debt, finance renovations, or lower your monthly payments.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('Mortgage Renewals & Refinancing', 'Never automatically accept your bank\'s renewal letter. We audit your existing mortgage terms, compare institutional options, and restructure debt to lower your monthly interest obligations.')" class="text-gold-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                        View Service Details <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-navy-900 text-gold-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Self-Employed Mortgages</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Specialized underwriting programs for business owners, contractors, and non-traditional income earners turned down by major banks.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('Self-Employed Mortgages', 'When traditional NOA tax returns do not reflect your real earning power, our alternative B-lender and bank statement programs evaluate your gross income and business cash flow to secure robust mortgage approvals.')" class="text-gold-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                        View Service Details <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-navy-900 text-gold-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-building-user"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Investment Property Financing</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Capital solutions for rental properties, multi-unit residential buildings, commercial plazas, and real estate portfolio expansion.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('Investment Property Financing', 'Scale your real estate portfolio with institutional commercial loans, private syndicated lending, and optimized debt-service coverage ratios tailored for real estate investors across the GTA.')" class="text-gold-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                        View Service Details <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-navy-900 text-gold-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">First-Time Home Buyers</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Step-by-step guidance through Ontario land transfer tax rebates, First Home Savings Accounts (FHSA), RRSP Home Buyers' Plan, and down payment options.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('First-Time Home Buyers Guidance', 'Navigating your first home purchase can feel overwhelming. We simplify the entire journey, explaining all government incentives, closing costs, deposit structures, and legal steps so you feel fully informed from search to key handover.')" class="text-gold-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                        View Service Details <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 6 / CTA Card -->
+                <div class="bg-navy-900 rounded-2xl p-8 border border-gold-500/30 shadow-lg flex flex-col justify-between text-white relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 rounded-2xl gold-gradient-bg flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Need Custom Advice?</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Speak directly with our team to find the best rate and mortgage structure for your unique financial situation.
+                        </p>
+                    </div>
+                    <a href="#contact" class="gold-gradient-bg text-white font-bold py-3.5 px-6 rounded-xl text-center text-sm shadow-lg shadow-gold-600/30 gold-gradient-hover transition-all">
+                        Speak With An Advisor
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: HOW IT WORKS -->
+    <section id="how-it-works" class="py-20 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 text-gold-600 font-bold text-xs uppercase tracking-wider mb-2">
+                    <span class="w-2 h-2 rounded-full bg-gold-500"></span> Streamlined Process
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+                    How We Get You Approved
+                </h2>
+                <p class="text-slate-600 mt-3 text-base">
+                    Four simple steps to secure your ideal rate and financing structure.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 relative">
+                    <div class="w-10 h-10 rounded-xl gold-gradient-bg text-white font-extrabold flex items-center justify-center text-lg mb-4">
+                        1
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-lg mb-2">Initial Consultation</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Tell us about your home buying or refinancing goals over a quick 15-minute phone or in-person chat.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 relative">
+                    <div class="w-10 h-10 rounded-xl gold-gradient-bg text-white font-extrabold flex items-center justify-center text-lg mb-4">
+                        2
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-lg mb-2">Lender Comparison</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">We shop over 50 top Canadian financial institutions to match you with the lowest rate and best terms.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 relative">
+                    <div class="w-10 h-10 rounded-xl gold-gradient-bg text-white font-extrabold flex items-center justify-center text-lg mb-4">
+                        3
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-lg mb-2">Underwriting & Approval</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Our experienced underwriting team handles document collection and paperwork directly with the lender.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 relative">
+                    <div class="w-10 h-10 rounded-xl gold-gradient-bg text-white font-extrabold flex items-center justify-center text-lg mb-4">
+                        4
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-lg mb-2">Successful Closing</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Your mortgage is finalized and funded, giving you peace of mind and key handover confidence.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: CONTACT FORM & DETAILS -->
+    <section id="contact" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Details Column -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <div class="inline-flex items-center gap-2 text-gold-600 font-bold text-xs uppercase tracking-wider mb-2">
+                            <span class="w-2 h-2 rounded-full bg-gold-500"></span> Get In Touch
+                        </div>
+                        <h2 class="text-3xl font-extrabold text-navy-900 tracking-tight">
+                            Book Your Free Mortgage Consultation
+                        </h2>
+                        <p class="text-slate-600 mt-3 text-sm leading-relaxed">
+                            Speak directly with our senior underwriting advisors. We are ready to help you analyze rates, structure refinancing, or secure purchase pre-approvals.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-500 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-navy-900 text-base">Direct Phone Numbers</h3>
+                                <p class="text-slate-700 text-sm font-semibold">
+                                    <a href="tel:4166496441" class="hover:text-gold-600">416-649-6441</a>
+                                </p>
+                                <p class="text-slate-700 text-sm font-semibold">
+                                    <a href="tel:4165727434" class="hover:text-gold-600">416-572-7434</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-500 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-navy-900 text-base">Head Office</h3>
+                                <p class="text-slate-600 text-sm">Mississauga, Ontario, Canada</p>
+                                <p class="text-xs text-slate-500 mt-0.5">Serving Mississauga, Brampton, Oakville, Toronto West & GTA</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-500 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-navy-900 text-base">Office Hours</h3>
+                                <p class="text-slate-600 text-sm">Monday – Friday: 9:00 AM – 7:00 PM EST</p>
+                                <p class="text-slate-600 text-sm">Saturday: By Appointment</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Regulatory Notice -->
+                    <div class="p-4 rounded-xl bg-white border border-slate-200 text-xs text-slate-500 space-y-1">
+                        <div class="font-bold text-navy-900 flex items-center gap-1.5">
+                            <i class="fa-solid fa-certificate text-gold-600"></i> Regulatory Compliance Notice
+                        </div>
+                        <p>Mortgage Approved Inc. is a fully licensed mortgage brokerage registered in Ontario, operating strictly under FSRA guidelines.</p>
+                    </div>
+                </div>
+
+                <!-- Booking Form Column with Formspree Endpoint -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-xl relative">
+                        <h3 class="text-2xl font-bold text-navy-900 mb-2">Schedule Your Consultation</h3>
+                        <p class="text-xs text-slate-500 mb-6">Complete the form below and an advisor will confirm your consultation time.</p>
+
+                        <!-- FORMSPREE POST FORM -->
+                        <form action="https://formspree.io/f/xvkkayed" method="POST" class="space-y-5">
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name *</label>
+                                    <input type="text" name="name" required placeholder="Jane Smith" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-gold-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Phone Number *</label>
+                                    <input type="tel" name="phone" required placeholder="(416) 000-0000" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-gold-500">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address *</label>
+                                    <input type="email" name="email" required placeholder="jane@example.com" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-gold-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Service Needed *</label>
+                                    <select name="service" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-gold-500">
+                                        <option value="New Home Purchases">New Home Purchases</option>
+                                        <option value="Mortgage Renewals & Refinancing">Mortgage Renewals & Refinancing</option>
+                                        <option value="Self-Employed Mortgages">Self-Employed Mortgages</option>
+                                        <option value="Investment Property Financing">Investment Property Financing</option>
+                                        <option value="First-Time Home Buyers">First-Time Home Buyers</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Preferred Contact Time</label>
+                                <select name="preferred_time" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-gold-500">
+                                    <option value="Morning (9:00 AM - 12:00 PM)">Morning (9:00 AM - 12:00 PM)</option>
+                                    <option value="Afternoon (12:00 PM - 5:00 PM)">Afternoon (12:00 PM - 5:00 PM)</option>
+                                    <option value="Evening (5:00 PM - 7:00 PM)">Evening (5:00 PM - 7:00 PM)</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Message or Financial Scenario Details</label>
+                                <textarea name="message" rows="4" placeholder="Briefly describe your mortgage requirements, timeline, or target property value..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-gold-500"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full gold-gradient-bg text-white font-bold py-4 rounded-xl shadow-lg shadow-gold-600/30 gold-gradient-hover transition-all duration-300 text-sm">
+                                Submit Consultation Request
+                            </button>
+
+                            <p class="text-[11px] text-slate-400 text-center">
+                                By submitting this form, you consent to being contacted by Mortgage Approved Inc. Your privacy is strictly protected.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 text-slate-400 text-sm pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Footer Column 1: Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-9 h-9 rounded-lg gold-gradient-bg flex items-center justify-center">
+                            <i class="fa-solid fa-circle-check text-white text-lg"></i>
+                        </div>
+                        <span class="text-lg font-extrabold text-white">MORTGAGE <span class="text-gold-500">APPROVED</span></span>
+                    </div>
+                    <p class="text-xs leading-relaxed text-slate-400">
+                        Mortgage Approved Inc. is a trusted mortgage brokerage based in Mississauga, Ontario, offering expert mortgage advisory, best-rate matching, and comprehensive financing across the GTA.
+                    </p>
+                </div>
+
+                <!-- Footer Column 2: Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 border-b border-slate-800 pb-2">Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-gold-400 transition-colors">Home Page</a></li>
+                        <li><a href="#about" class="hover:text-gold-400 transition-colors">About Our Firm</a></li>
+                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Mortgage Services</a></li>
+                        <li><a href="#how-it-works" class="hover:text-gold-400 transition-colors">How It Works</a></li>
+                        <li><a href="#contact" class="hover:text-gold-400 transition-colors">Book Consultation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 3: Services Links -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 border-b border-slate-800 pb-2">Our Solutions</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#services" class="hover:text-gold-400 transition-colors">New Home Purchases</a></li>
+                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Mortgage Renewals & Refinancing</a></li>
+                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Self-Employed Mortgages</a></li>
+                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Investment Property Financing</a></li>
+                        <li><a href="#services" class="hover:text-gold-400 transition-colors">First-Time Home Buyers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 4: Direct Contacts & License -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 border-b border-slate-800 pb-2">Contact & Licensing</h4>
+                    <div class="space-y-2 text-xs text-slate-400">
+                        <p><i class="fa-solid fa-phone text-gold-500 mr-2"></i> <a href="tel:4166496441" class="hover:text-gold-400">416-649-6441</a></p>
+                        <p><i class="fa-solid fa-phone text-gold-500 mr-2"></i> <a href="tel:4165727434" class="hover:text-gold-400">416-572-7434</a></p>
+                        <p><i class="fa-solid fa-location-dot text-gold-500 mr-2"></i> Mississauga, Ontario</p>
+                        <p class="pt-2 text-[11px] text-slate-500">Registered and compliant with FSRA Ontario brokerage standards.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <div>
+                    © <span id="current-year"></span> Mortgage Approved Inc. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-gold-400 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-gold-400 transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-gold-400 transition-colors">FSRA Disclosure</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- SERVICE DETAIL INTERACTIVE MODAL -->
+    <div id="service-modal" class="fixed inset-0 z-50 bg-navy-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl relative border border-slate-200">
+            <button onclick="closeServiceModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 text-xl font-bold focus:outline-none" aria-label="Close Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-12 h-12 rounded-xl gold-gradient-bg flex items-center justify-center text-white text-xl mb-4">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3 id="modal-title" class="text-2xl font-bold text-navy-900 mb-3">Service Details</h3>
+            <p id="modal-desc" class="text-slate-600 text-sm leading-relaxed mb-6"></p>
+            <a href="#contact" onclick="closeServiceModal()" class="block w-full text-center gold-gradient-bg text-white font-bold py-3.5 rounded-xl shadow-lg shadow-gold-600/20 text-sm">
+                Discuss This Financing Option
+            </a>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Modal Logic for Service Details
+        function openServiceModal(title, description) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-desc').textContent = description;
+            document.getElementById('service-modal').classList.remove('hidden');
+        }
+
+        function closeServiceModal() {
+            document.getElementById('service-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
